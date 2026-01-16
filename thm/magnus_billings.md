@@ -23,3 +23,9 @@ Now having gained access the first thing was to check system information and run
 This gave a standard shell but the system didn't have a bash shell
 ![shell](shell.png)
 
+The first objective was to hunt for the user flag which i easly found in the home directory of the current user:
+![userflag](userflag.png)
+To obtain the root flag one had to have root priviliges and this made me curoius of what the current user was allowed 
+to run as sudo and i got the binary:
+
+![permission](permission.png)
