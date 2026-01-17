@@ -18,7 +18,7 @@ found out i could run nay commands as root
 Having this i knew i  the only way for me to retrieve all the two flags was by elevating my prileges to root
 
 finding suid binaries of the system:
-![suid binaries](suidbianries.png.png)
+![suid binaries](suidbianries.png)
 The binaries contained one binary which was :
 ```
 /usr/bin/system-control
