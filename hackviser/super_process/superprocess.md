@@ -1,3 +1,5 @@
+Date: 16/01/2026
+Target OS: linux
 This is  a medium level vm focusing on :
 ```
 how to perform vulnerability discovery in a common open-source web application, gain access to the machine, and perform escalation attacks on Linux-based systems.

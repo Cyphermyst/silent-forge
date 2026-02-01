@@ -1,3 +1,7 @@
+Date: 28/01/2026
+Target OS: Ubuntu Linux
+
+
 #after almost one year am back to this vm again in tryhackme,the last time i was stuck on gaining access to 
 the system.'
 

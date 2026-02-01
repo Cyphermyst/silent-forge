@@ -1,3 +1,7 @@
+Date:29/01/2026
+Target os: Ubuntu
+
+
 This was an easy to pwn site though the trick part was being able to upload the php payload without being detected.
 	**Recon**
 	Started with nmap recon to see what services were running on the target
