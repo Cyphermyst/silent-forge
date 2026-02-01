@@ -1,12 +1,24 @@
-Target : 10.80.162.73
+Target OS: Ubuntu
+	** RECON **
+Open ports and running services:
+![nmap](nmap.png)
+
+The website running: 
+![website](website.png)
 
 
-/robots.txt
+Web enumeration:
+![web](web_enum.png)
+Found the following open web directories which leaked the following info:
+
+
+/robots.txt  contained a string which i later found out to be the password for the login
+
 Wubbalubbadubdub
 
 ```sh
 
-
+// a comment in the index.html source code
     Note to self, remember username!
 
     Username: R1ckRul3s
@@ -15,6 +27,8 @@ Wubbalubbadubdub
 	    Wubbalubbadubdub
 
 ```
+Gained access through the leaked username and password from /robots.txt
+![dashboar](dashboard.png)
 
 clue.txt
 Look around the file system for the other ingredient.
